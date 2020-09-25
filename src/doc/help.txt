@@ -1,0 +1,14 @@
+${THIS} [-m n|r|a]
+  名簿TSVを並べ替える。
+parameters:
+  -m 並べ替え方法。
+     n|number    出席番号順。デフォルトである。
+     r|random    ランダム。
+     a|alternate ランダム（男女交互）。
+stdin:
+  名簿TSVは以下で生成されたものを想定している。
+  https://github.com/ytyaru/Sqlite3.JapaneseNames.Rate.20200924163636
+example:
+  names.sh | ${THIS}
+  names.sh | ${THIS} -m r
+  names.sh | ${THIS} -m a
